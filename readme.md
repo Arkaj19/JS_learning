@@ -118,13 +118,13 @@ const c = 30;
 
 ## Arrays
 
-### Methods: push, pop, shift, unshift, splice, slice, reverse, sort
+### Methods: `push`, `pop`, `shift`, `unshift`, `splice`, `slice`, `reverse`, `sort`
 
-### Other: map, filter, reduce, find, some, every
+### Other: `map`, `filter`, `reduce`, `find`, `some`, `every`
 
 ### Desctructuring
 
-### Functions demo: push, pop, shift, unshift
+### Functions demo: `push`, `pop`, `shift`, `unshift`
 
 ![alt text](image-3.png)
 
