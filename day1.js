@@ -183,10 +183,18 @@ let count2 = counter();
 count2();
 
 counter()();
-counter()()
+counter()();
 
 console.log(rand);
 var rand = 30; // Comes undefined because var is hoisted at the beginning of the load of the program
 
+let marks = [10, 20, 50, 80, 90, 70, 67];
+console.log("NEW VERSION:", marks);
 
+marks.splice(3, 1);
+console.log(marks);
 
+console.log(rand);
+console.log("Hi there");
+console.log("Hi there");
+console.log("Arka");
