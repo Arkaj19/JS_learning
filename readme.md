@@ -118,17 +118,17 @@ const c = 30;
 
 ## Arrays
 
-### Methods: `push`, `pop`, `shift`, `unshift`, `splice`, `slice`, `reverse`, `sort`
+#### Methods: `push`, `pop`, `shift`, `unshift`, `splice`, `slice`, `reverse`, `sort`
 
-### Other: `map`, `filter`, `reduce`, `find`, `some`, `every`
+#### Other: `map`, `filter`, `reduce`, `find`, `some`, `every`
 
-### Desctructuring
+#### Desctructuring
 
-### Functions demo: `push`, `pop`, `shift`, `unshift`
+#### Functions demo: `push`, `pop`, `shift`, `unshift`
 
 ![alt text](image-3.png)
 
-### Functions demo: splice, shift, unshift
+#### Functions demo: splice, shift, unshift
 
 ```js
 marks.splice(3, 1); // This starts removing the element from 3rd index, and exactly removes '1' index since it is given as 1 in the second parameter.
@@ -143,7 +143,7 @@ console.log(marks);
 
 ![alt text](image-4.png)
 
-### Functions demo: reverse
+#### Functions demo: reverse
 
 ```js
 marks.reverse(); // This reverses the array
@@ -152,7 +152,7 @@ console.log(marks);
 
 ![alt text](image-5.png)
 
-### Slice Function
+#### Slice Function
 
 ```js
 let new_marks = marks.slice(2, 5); // Doesn't overwrites the main array but slices the main array and places it in the new declared array
@@ -161,6 +161,8 @@ console.log(new_marks);
 ```
 
 ![alt text](image-6.png)
+
+#### Sort Function
 
 ```js
 marks.sort(); // Marks is sorted based on string comparison default
@@ -172,3 +174,62 @@ console.log(alpha.sort());
 ```
 
 ![alt text](image-7.png)
+
+#### Functions: `map()`, `filter()`, `reduce()`, `forEach()`, `find()`, `some()`, `every()`
+
+```js
+/// Iteration Methods ///
+
+// Map Function
+let prices = [100, 200, 300, 400, 500, 600];
+let new_p = prices.map((p) => {
+  return p * 2;
+});
+
+console.log(new_p);
+
+// Filter Function
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+let num_p = numbers.filter((p) => {
+  return p % 2 === 0;
+});
+
+console.log(num_p);
+
+// Reduce Function
+let total = numbers.reduce((acc, value) => {
+  // There is an accumulator and a value
+  return (acc += value);
+});
+
+console.log("The overall reduce total is : " + total);
+
+// forEach Function
+let c = 0;
+numbers.forEach((n) => {
+  console.log(`The ${c}th number is ` + n);
+  c++;
+});
+```
+
+### 🔑 Summary:
+
+#### `find` → gives you the first matching element.
+
+#### `some` → checks if at least one matches.
+
+#### `every` → checks if all match.
+
+```js
+// find function
+let first = numbers.find((p) => p > 10); // It returns the first possible match
+console.log(first);
+
+// some function
+let hasEven = numbers.some((p) => p % 2 != 0); // It returns true if the first possible match is found, else returns false
+console.log(hasEven);
+
+// every function
+let largeNum = numbers.every((p) => p > 12); // It returns true only if all the numbers match the condition and false even if one number does not matches.
+console.log(largeNum);
+```

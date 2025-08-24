@@ -46,3 +46,48 @@ console.log(marks); // [20, 3, 50, 67, 70, 90]
 
 let alpha = ["g", "h", "l", "r", "a", "b", "j", "p"]; // alpha is based on string comparison by default hence it is sorted by default
 console.log(alpha.sort());
+
+/// Iteration Methods ///
+
+// Map Function
+let prices = [100, 200, 300, 400, 500, 600];
+let new_p = prices.map((p) => {
+  return p * 2;
+});
+
+console.log(new_p);
+
+// Filter Function
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+let num_p = numbers.filter((p) => {
+  return p % 2 === 0;
+});
+
+console.log(num_p);
+
+// Reduce Function
+let total = numbers.reduce((acc, value) => {
+  // There is an accumulator and a value
+  return (acc += value);
+});
+
+console.log("The overall reduce total is : " + total);
+
+// forEach Function
+let c = 0;
+numbers.forEach((n) => {
+  console.log(`The ${c}th number is ` + n);
+  c++;
+});
+
+// find function
+let first = numbers.find((p) => p > 10); // It returns the first possible match
+console.log(first);
+
+// some function
+let hasEven = numbers.some((p) => p % 2 != 0); // It returns true if the first possible match is found, else returns false
+console.log(hasEven);
+
+// every function
+let largeNum = numbers.every((p) => p > 12); // It returns true only if all the numbers match the condition and false even if one number does not matches.
+console.log(largeNum);
