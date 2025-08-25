@@ -233,3 +233,49 @@ console.log(hasEven);
 let largeNum = numbers.every((p) => p > 12); // It returns true only if all the numbers match the condition and false even if one number does not matches.
 console.log(largeNum);
 ```
+
+![alt text](image-8.png)
+
+### ⚠️ Common Confusions
+
+- splice changes original array, slice does not
+- forEach vs map : map returns a new array
+- sort() converts values to strings unless compareFn is provided:
+
+```js
+js[(10, 2, 3)].sort(); // [10, 2, 3] → ["10", "2", "3"] → wrong order
+```
+
+```js
+js;
+arr.sort((a, b) => a - b); // Correct numeric sort
+```
+
+### Questions regarding arrays
+
+- Difference between `unshift()` and `push()`?
+
+- A different use of `splice`
+
+```js
+let colors = ["green", "red"];
+colors.splice(1, 0, "yellow", "blue");
+console.log(colors);
+```
+
+![alt text](image-9.png)
+
+Here the thing is that as we know splice is used to remove things from a particular point ( First parameter), and the number of things the 2nd parameter.
+But the thing is that here as we are not removing any thing. After that whatever we add, it will be part of the array from the starting point.
+Here we are removing 0 elements, so the yellow and blue are added at the 1st index position.
+
+#### COMMON CONFUSIONS REGARDING `arrays`
+
+- Difference between Slice and Splice.
+- Slice creates a new array for us. Splice changes the existing array.
+
+- `forEach` vs `map`
+- In `forEach` it does not requires return and does not create a new array.
+- In `Map` it requires to return something, but also creates a new aray out of the original array.
+
+- For sorting numbers we need to provide a comparator function along with `.sort()` to actually sort it.
